@@ -1,10 +1,9 @@
-import express from 'express';
-import { PORT } from './config.js';
-import router from './routes/index.routes.js';
+import express from 'express'
+import router from './routes/index.routes';
+
 const app = express();
 
 app.use(router);
 
-//server
 app.listen(PORT);
-console.log("Serven on port ", PORT);
+console.log("Server on port ", 4000);
