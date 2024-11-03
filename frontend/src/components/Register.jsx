@@ -1,16 +1,24 @@
-import { Button, DateInput, Input, Link } from "@nextui-org/react";
+import { Button, DateInput, Input, Link, SelectItem, Select } from "@nextui-org/react";
 import {CalendarDate} from "@internationalized/date";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register(){
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [apmat, setApmat] = useState("")
+    const [appat, setAppat] = useState("")
+    const [birth, setBirth] = useState("")
+    const [rol, setRol] = useState("")
+    const [email, setEmail] = useState("")
+    const navigate = useNavigate()
 
     return(
 
+    <div className="absolute inset-0 flex items-center justify-center">
     <div className="flex flex-col gap-3 w-96">
-      <h1 className="flex flex-col gap-1">Registrarse</h1>
+      <h1 className="text-center font-medium text-4xl">Registrarse</h1>
       <Input
         autoFocus
         label="Nombre"
@@ -22,15 +30,15 @@ export default function Register(){
         autoFocus
         label="Apellido Paterno"
         variant="bordered"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
+        value={appat}
+        onChange={e => setAppat(e.target.value)}
       />
       <Input
         autoFocus
         label="Apellido Materno"
         variant="bordered"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
+        value={apmat}
+        onChange={e => setApmat(e.target.value)}
       />
         <DateInput 
           label="Cumpleaños"
@@ -42,8 +50,8 @@ export default function Register(){
         autoFocus
         label="Email"
         variant="bordered"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
+        value={email}
+        onChange={e => setEmail(e.target.value)}
       />
       <Input
         label="Contraseña"
@@ -52,8 +60,19 @@ export default function Register(){
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
-      <Button color="primary">Registrarse</Button>
-      <p>¿Ya tienes cuenta? <Link color="primary">Iniciar Sesion</Link></p>
+      <Select
+        label="Rol"
+        placeholder="Selecciona un rol"
+        variant="bordered"
+        value={rol}
+        onChange={e => setRol(e.target.value)}
+      >
+        <SelectItem>Propietario</SelectItem>
+        <SelectItem>Cliente</SelectItem>
+      </Select>
+      <Button color="primary" onClick={() => navigate(`/salones`)}>Registrarse</Button>
+      <p>¿Ya tienes cuenta? <Link color="primary" onClick={() => navigate(`/`)}>Iniciar Sesion</Link></p>
+    </div>
     </div>
     )
 }

@@ -1,15 +1,18 @@
 import { Button, Input, Link } from "@nextui-org/react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
     return(
 
+    <div className="absolute inset-0 flex items-center justify-center">
     <div className="flex flex-col gap-3 w-96">
-      <h1 className="flex flex-col gap-1">Iniciar sesion</h1>
+      <h1 className="text-center text-4xl font-medium">Iniciar sesion</h1>
       <Input
         autoFocus
         label="Email"
@@ -29,8 +32,9 @@ export default function Login(){
           ¿Olvidaste la contraseña?
         </Link>
       </div>
-      <Button color="primary">Iniciar sesion</Button>
-      <p>¿Aún no tienes cuenta? <Link color="primary">Registrarse</Link></p>
+      <Button color="primary" onClick={() => navigate(`/salones`)}>Iniciar sesion</Button>
+      <p>¿Aún no tienes cuenta? <Link color="primary" onClick={() => navigate(`/registro`)}>Registrarse</Link></p>
+    </div>
     </div>
     )
 }

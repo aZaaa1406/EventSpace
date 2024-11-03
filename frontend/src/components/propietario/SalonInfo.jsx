@@ -1,21 +1,9 @@
 import { Image, Button } from "@nextui-org/react";
-import { Link, useLocation } from "react-router-dom";
 
-export default function SalonPage() {
-  const location = useLocation();
-  const salon = location.state?.salon;
+export default function SalonInfo() {
 
   return (
     <>
-    <header>
-      <Link
-        to={{
-          pathname: `/salones`,
-        }}
-      >
-      <h1 className="m-8 text-xl">EnterSpace</h1>
-      </Link>
-    </header>
       <div className="grid auto-rows-[400px] grid-cols-2 gap-4">
         <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900">
           <Image
@@ -27,22 +15,11 @@ export default function SalonPage() {
           />
         </div>
         <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900">
-          <h1 className="text-4xl mb-4">{salon.Nombre}</h1>
-          <p className="text-lg">{salon.Descripcion}</p>
-          <p>Anfitrion: {salon.Anfitrion}</p>
+          <h1>Nombre</h1>
+          <p>Descripcion</p>
         </div>
         <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900">
-          <h1>Reservar</h1>
-          <p>Inputs</p>
-          <Link
-            key={salon.Id}
-            to={{
-              pathname: `/reservar/${salon.Id}`,
-            }}
-            state={{ salon }}
-          >
-            <Button color="primary">Reservar</Button>
-          </Link>
+          <Button color="primary">Editar</Button>
         </div>
       </div>
     </>
