@@ -6,7 +6,8 @@
         "Descripcion": "Un salón elegante con un ambiente sofisticado, ideal para bodas y eventos de gala.",
         "Espacio": "300 personas",
         "Imagen": "https://salonesyfiestas.com.mx/wp-content/uploads/2024/03/salones-de-fiestas_131-1.webp",
-        "Anfitrion": "Anastacio"
+        "Anfitrion": "Anastacio",
+        "CostoHr": "5000"
       },
       {
         "Id": "2",
@@ -14,28 +15,32 @@
         "Descripcion": "Un amplio jardín con áreas verdes y un pabellón para eventos al aire libre como fiestas de día y ceremonias.",
         "Espacio": "500 personas",
         "Imagen": "https://i0.wp.com/presidenteicmexico.com/wp-content/uploads/2024/04/salones-fiestas-cdmx-cumplea%C2%A7os-esp.jpg?fit=479%2C254&ssl=1",
-        "Anfitrion": "Fulgencio"
+        "Anfitrion": "Fulgencio",
+        "CostoHr": "5000"
       },
       {
         "Id": "3",
         "Nombre": "Salón Diamante",
         "Descripcion": "Espacio moderno con iluminación LED y una pista de baile grande, perfecto para eventos corporativos y fiestas nocturnas.",
         "Espacio": "200 personas",
-        "Anfitrion": "Elias"
+        "Anfitrion": "Elias",
+        "CostoHr": "5000"
       },
       {
         "Id": "4",
         "Nombre": "Palacio Real",
         "Descripcion": "Un majestuoso salón de estilo clásico, ideal para eventos grandes como bodas, quinceañeras y conferencias.",
         "Espacio": "600 personas",
-        "Anfitrion": "Juan Carlos"
+        "Anfitrion": "Juan Carlos",
+        "CostoHr": "5000"
       },
       {
         "Id": "5",
         "Nombre": "Terraza del Lago",
         "Descripcion": "Una terraza con vista al lago, perfecta para recepciones, fiestas de cumpleaños y eventos más íntimos.",
         "Espacio": "150 personas",
-        "Anfitrion": "Ana"
+        "Anfitrion": "Ana",
+        "CostoHr": "5000"
       }
   ]
   }
