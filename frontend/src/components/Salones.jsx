@@ -1,4 +1,4 @@
-import { Input } from "@nextui-org/react";
+import { Avatar, Input } from "@nextui-org/react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { SearchIcon } from "../assets/SearchIcon";
 import listadoSalones from "../assets/salones.json";
@@ -27,13 +27,7 @@ export default function ListaSalones() {
           className="max-w-[450px] p-3"
         />
         <Link>
-          <Image
-            shadow="sm"
-            radius="lg"
-            width="100%"
-            className="w-10 h-10"
-            src="profile"
-          />
+          <Avatar />
         </Link>
       </header>
       <div className="flex flex-wrap justify-evenly">
@@ -56,7 +50,7 @@ export default function ListaSalones() {
                   src={salon.Imagen}
                 />
               </CardBody>
-              <CardFooter className="flex flex-col items-start">
+              <CardFooter className="flex flex-col items-start text-ellipsis overflow-hidden">
                 <b className="text-2xl font-medium">{salon.Nombre}</b>
                 <p className="text-xs text-left">{salon.Espacio}</p>
                 <p className="text-s">{salon.Descripcion}</p>

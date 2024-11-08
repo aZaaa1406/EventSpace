@@ -41,6 +41,14 @@
         "Espacio": "150 personas",
         "Anfitrion": "Ana",
         "CostoHr": "5000"
+      },
+      {
+        "Id": "6",
+        "Nombre": "Elixir Hall",
+        "Descripcion": "Élixir Hall no es solo un salón de fiestas, es una experiencia inmersiva donde cada rincón cuenta una historia de elegancia, magia y sofisticación. Este espacio único combina lo clásico y lo contemporáneo, con una decoración vanguardista que incluye paredes espejadas, techos altos decorados con luces de cristal que simulan estrellas, y ventanales con vistas a un jardín vertical que, por la noche, se ilumina con un espectáculo de luces diseñado especialmente para eventos. Élixir Hall cuenta con zonas VIP para los invitados más especiales, y el ambiente se transforma durante la noche, desde una cálida recepción hasta una auténtica fiesta de ensueño. Es ideal para bodas, quinceaños, eventos corporativos y cualquier celebración que exija un toque de lujo sin igual.",
+        "Espacio": "200 personas",
+        "Anfitrion": "Fornic",
+        "CostoHr": "4500"
       }
   ]
   }
