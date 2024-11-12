@@ -9,6 +9,7 @@ import SalonPage from './components/SalonPage.jsx'
 import Register from './components/Register.jsx'
 import Reservacion from './components/Reservacion.jsx'
 import SalonInfo from './components/propietario/SalonInfo.jsx'
+import FormSalon from './components/Formsalon.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/salonInfo/:id',
     element: <SalonInfo />
+  },
+  {
+    path: '/registroSalon',
+    element: <FormSalon />
   }
 ])
 
