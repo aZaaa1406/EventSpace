@@ -7,7 +7,7 @@
         "Espacio": "300 personas",
         "Imagen": "https://salonesyfiestas.com.mx/wp-content/uploads/2024/03/salones-de-fiestas_131-1.webp",
         "Anfitrion": "Anastacio",
-        "CostoHr": "5000"
+        "CostoHr": 125
       },
       {
         "Id": "2",
@@ -16,7 +16,7 @@
         "Espacio": "500 personas",
         "Imagen": "https://i0.wp.com/presidenteicmexico.com/wp-content/uploads/2024/04/salones-fiestas-cdmx-cumplea%C2%A7os-esp.jpg?fit=479%2C254&ssl=1",
         "Anfitrion": "Fulgencio",
-        "CostoHr": "5000"
+        "CostoHr": 150
       },
       {
         "Id": "3",
@@ -24,7 +24,7 @@
         "Descripcion": "Espacio moderno con iluminación LED y una pista de baile grande, perfecto para eventos corporativos y fiestas nocturnas.",
         "Espacio": "200 personas",
         "Anfitrion": "Elias",
-        "CostoHr": "5000"
+        "CostoHr": 200
       },
       {
         "Id": "4",
@@ -32,7 +32,7 @@
         "Descripcion": "Un majestuoso salón de estilo clásico, ideal para eventos grandes como bodas, quinceañeras y conferencias.",
         "Espacio": "600 personas",
         "Anfitrion": "Juan Carlos",
-        "CostoHr": "5000"
+        "CostoHr": 135
       },
       {
         "Id": "5",
@@ -40,7 +40,7 @@
         "Descripcion": "Una terraza con vista al lago, perfecta para recepciones, fiestas de cumpleaños y eventos más íntimos.",
         "Espacio": "150 personas",
         "Anfitrion": "Ana",
-        "CostoHr": "5000"
+        "CostoHr": 190
       },
       {
         "Id": "6",
@@ -48,7 +48,7 @@
         "Descripcion": "Élixir Hall no es solo un salón de fiestas, es una experiencia inmersiva donde cada rincón cuenta una historia de elegancia, magia y sofisticación. Este espacio único combina lo clásico y lo contemporáneo, con una decoración vanguardista que incluye paredes espejadas, techos altos decorados con luces de cristal que simulan estrellas, y ventanales con vistas a un jardín vertical que, por la noche, se ilumina con un espectáculo de luces diseñado especialmente para eventos. Élixir Hall cuenta con zonas VIP para los invitados más especiales, y el ambiente se transforma durante la noche, desde una cálida recepción hasta una auténtica fiesta de ensueño. Es ideal para bodas, quinceaños, eventos corporativos y cualquier celebración que exija un toque de lujo sin igual.",
         "Espacio": "200 personas",
         "Anfitrion": "Fornic",
-        "CostoHr": "4500"
+        "CostoHr": 170
       }
   ]
   }

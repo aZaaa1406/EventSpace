@@ -1,9 +1,30 @@
-import { Image, Button, Input, TimeInput, DatePicker, Avatar, CheckboxGroup, Checkbox } from "@nextui-org/react";
+import {
+  Image,
+  Button,
+  Input,
+  TimeInput,
+  DatePicker,
+  Avatar,
+  CheckboxGroup,
+  Checkbox,
+  RadioGroup,
+  Radio,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function SalonPage() {
   const location = useLocation();
   const salon = location.state?.salon;
+
+  const [personas, setPersonas] = useState();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <>
@@ -31,7 +52,7 @@ export default function SalonPage() {
         </div>
         <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900">
           <p className="text-3xl">
-            ${salon.CostoHr} <span className="text-lg">hora</span>
+            ${salon.CostoHr} <span className="text-lg">por persona </span>
           </p>
           <h1 className="my-4">Información del Evento</h1>
           <Input
@@ -39,24 +60,53 @@ export default function SalonPage() {
             label="Cantidad"
             variant="bordered"
             className="mb-4"
+            value={personas}
+            onChange={(e) => setPersonas(e.target.value)}
           />
-          <TimeInput label="Event Time" variant="bordered" className="mb-4"/>
-          <DatePicker label="Birth date" className="max-w-[284px] mb-4"  variant="bordered"/>
-          <CheckboxGroup
-            label="Adicionales"
+          <TimeInput
+            label="Inicio del evento"
+            variant="bordered"
             className="mb-4"
-          >
+          />
+          <DatePicker
+            label="Dia del evento"
+            className="max-w-[284px] mb-4"
+            variant="bordered"
+          />
+          <CheckboxGroup label="Adicionales" className="mb-4">
             <Checkbox>2</Checkbox>
           </CheckboxGroup>
-          <Link
-            key={salon.Id}
-            to={{
-              pathname: `/reservar/${salon.Id}`,
-            }}
-            state={{ salon }}
-          >
-            <Button color="primary">Reservar</Button>
-          </Link>
+          <RadioGroup label="Selecciona tu platillo" className="mb-4">
+            <Radio value="cremaElote">Crema de Elote</Radio>
+            <Radio value="spaghettiAlfredo">Spaghetti Alfredo</Radio>
+          </RadioGroup>
+          <Button color="primary" onPress={onOpen}>
+            Reservar
+          </Button>
+          <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+            <ModalContent>
+              {(onClose) => (
+                <>
+                  <ModalHeader className="flex flex-col gap-1">
+                    Confirmar la reserva
+                  </ModalHeader>
+                  <ModalBody>
+                    <p>Nombre del salon: {salon.Nombre}</p>
+                    <p>Cantidad de personas: {personas}</p>
+                    <p>Nombre del salon: {salon.Nombre}</p>
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="danger" variant="light" onPress={onClose}>
+                      Close
+                    </Button>
+                    <Button color="primary" onPress={onClose}>
+                      Action
+                    </Button>
+                  </ModalFooter>
+                </>
+              )}
+            </ModalContent>
+          </Modal>
         </div>
         <div className="row-span-1 col-span-3 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900">
           <h1 className="text-4xl mb-4">{salon.Nombre}</h1>
