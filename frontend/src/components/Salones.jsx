@@ -5,7 +5,7 @@ import listadoSalones from "../assets/salones.json";
 import { Link } from "react-router-dom";
 
 export default function ListaSalones() {
-  const salonPropietario = []
+  const salonPropietario = [1]
   const isPropietario = true
 
   return (

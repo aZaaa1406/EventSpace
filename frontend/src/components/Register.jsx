@@ -1,6 +1,6 @@
 import { Button, DateInput, Input, Link, SelectItem, Select } from "@nextui-org/react";
 import {CalendarDate} from "@internationalized/date";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Register(){
@@ -10,9 +10,10 @@ export default function Register(){
     const [apmat, setApmat] = useState("")
     const [appat, setAppat] = useState("")
     const [birth, setBirth] = useState("")
-    const [rol, setRol] = useState("")
+    const [rol, setRol] = useState()
     const [email, setEmail] = useState("")
     const navigate = useNavigate()
+    const AdminContext = createContext(isPropietario)
 
     return(
 
@@ -64,11 +65,11 @@ export default function Register(){
         label="Rol"
         placeholder="Selecciona un rol"
         variant="bordered"
-        value={rol}
-        onChange={e => setRol(e.target.value)}
+        selectedKeys={rol}
+        onChange={setRol()}
       >
-        <SelectItem>Propietario</SelectItem>
-        <SelectItem>Cliente</SelectItem>
+        <SelectItem key={true}>Propietario</SelectItem>
+        <SelectItem key={false}>Cliente</SelectItem>
       </Select>
       <Button color="primary" onClick={() => navigate(`/salones`)}>Registrarse</Button>
       <p>¿Ya tienes cuenta? <Link color="primary" onClick={() => navigate(`/`)}>Iniciar Sesion</Link></p>
